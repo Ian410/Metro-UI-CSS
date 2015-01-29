@@ -247,12 +247,11 @@
     }
 })(jQuery);
 
-$(function(){
-    $.Metro.initAll();
+jQuery(function(){
+    jQuery.Metro.initAll();
 });
 
-
-$(function(){
+(function($){
     if (METRO_AUTO_REINIT) {
         //$(".metro").bind('DOMSubtreeModified', function(){            $.Metro.initAll();        });
         var originalDOM = $('.metro').html(),
@@ -268,4 +267,4 @@ $(function(){
             }
         }, 500);
     }
-});
+})(jQuery);
